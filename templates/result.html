@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+</head>
+<body>
+    <h1>Resume Analysis Result</h1>
+
+    <h2>Extracted Skills:</h2>
+    <ul>
+        {% for s in skills %}
+        <li>{{ s }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Detected Entities (spaCy):</h2>
+    <ul>
+        {% for ent, label in entities %}
+        <li>{{ ent }} - {{ label }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Full Resume Text:</h2>
+    <pre>{{ text }}</pre>
+</body>
+</html>
